@@ -1,0 +1,166 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+
+    <title>Dakota CMS : руководство пользователя</title>
+
+    <link rel='stylesheet' type='text/css' media='all' href='userguide.css'/>
+
+
+    <link rel="icon" href="/favicon.ico" type="image/x-icon"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv='expires' content='-1'/>
+    <meta http-equiv='pragma' content='no-cache'/>
+    <meta name='robots' content='all'/>
+    <meta name='author' content='Dakota CMS Dev Team'/>
+    <meta name='description' content='Руководство по  Dakota CMS на русском языке'/>
+    <meta name='keywords'
+          content='Dakota CMS, codeigniter, фреймворк, руководство, описание,cms, php, разработка, программирование, модель, отображение, контроллер'/>
+
+</head>
+<body>
+
+<table cellpadding="0" cellspacing="0" border="0" style="width:100%">
+    <tr>
+        <td id="breadcrumb">
+
+       <a href="http://dakota-cms.com"  target="_blank">Dakota CMS Home</a> |   <a href="/" target="_blank">Project Home</a> | <a  href="index.html"  name="top">Documentation Home</a>
+        </td>
+
+    </tr>
+</table>
+
+<div id="masthead">
+    <table cellpadding="0" cellspacing="0" border="0" style="width:100%">
+        <tr>
+            <td><h1> Dakota CMS, руководство пользователя к версии 0.4</h1></td>
+
+        </tr>
+    </table>
+</div>
+<div id="content">
+    <h1> Публикация страниц и новостей</h1>
+
+
+    <ul>
+        <h2>Информация</h2>
+        <li> В этом разделе создаются html страницы и новости</li>
+        <li>Если статья длинная, введите тэг %cut% в любом месте, и он превратится в ссылку 'далее'</li>
+        <li>Чтобы добавить видео, просто вставьте ссылку, например http://www.youtube.com/watch?v=GP5C3WrLx_s в
+            текст.
+            Поддерживаются все популярные видеохостинги.
+        </li>
+
+        <li>Чтобы узнать ссылку на загруженный Вами файл, перейдите в раздел <a href="files.html">Файлы</a> или <a href="gallery.html">Галерею</a> и кликните
+            Copy Link
+        </li>
+        <li>Чтобы вставить ссылку на email просто вставьте email в текст, он будет превращена в спамозащищенный
+            вид.
+        </li>
+        <li>В текущей версии Dakota CMS нельзя вставлять произвольный код HTML  (например Googl Map) публикации.
+            Эта функциональность в разработке.
+        </li>
+              <li>Чтобы вставить ссылку или внешнюю картинку, воспользуйтесь этими пунктами редактора <img
+                src="img/icons-editor.jpg"></li>
+        <img src="img/icon_important_24.gif"/>  шаблон публикации имеет ширину 600px, поэтому не используйте картинки большей ширины - они будут обрезаны.
+
+       </ul>
+
+    <ul>
+       <h2> Вид новой публикации в админке  </h2>
+
+
+       <img src="img/_prev_articles.jpg" alt="" />
+  </ul>
+    <ul>
+        <h2>ЧПУ ссылка </h2>
+        <li>Ссылка вида Dacota.loc/articles/new/ намного приятнее Глазу и Роботу, чем
+            Dacota.loc/index.php?page=articles&action=new , то есть это Человеко Понятная Сссылка
+        </li>
+        <li>
+            Оставите пустой - будет создана из названия.
+        </li>
+        <li>
+            <img src="img/icon_important_24.gif"/> Вы не можете задать ЧПУ ссылку, совпадающую с уже существующей - произойдет ошибка.
+        </li>
+    </ul>
+
+    <ul>
+        <h2>Тэги </h2>
+        <li>
+            Тэги - это автоклассификаторы ваших страниц. Например - новости, рыбалка, мультики
+        </li>
+        <li>
+            Заполните минимум один, максимум - пять. Без запятых, каждый в своем окне.
+        </li>
+        <li>
+            Тэги выводятся в <a href="widgets.html">Виджете Облако Тэгов</a>
+        </li>
+    </ul>
+
+
+    <ul>
+        <h2>Вывести на сайт? </h2>
+        <li>
+            Если не выбрать это пункт - публикация будет видна только в админ-центре.
+        </li>
+        <li>
+            <img src="img/icon_important_24.gif"/> Не забудьте вывести публикацию на сайт после редактирования.
+        </li>
+    </ul>
+
+
+    <ul>
+        <h2> Это публикация для главной? </h2>
+        <li>
+            Используйет эту опцию, если вы хотите , чтобы на главной была некая статическая информация, не из раздела новостей.
+        </li>
+        <li>
+            Если не выбрано - на главной будут выводиться 3 последние публикации.
+        </li>
+        <li>
+            <img src="img/icon_important_24.gif"/> Доступна только с опцией &laquo;Вывести на сайт&raquo;
+        </li>
+    </ul>
+
+
+    <ul>
+        <h2> Это НЕ новость? </h2>
+        <li>
+      Выберите это пункт, например,  для создания  страницы &laquo;О проекте&raquo; или   &laquo;Контакты&raquo;  и используйте ссылку на нее в шаблоне <i>header.tpl</i> или виджете Меню.
+            В примере Dakota, который вы скачали, так сделана страница  &laquo;О проекте&raquo;.
+        </li>
+        <li>
+           Если  выбрано -  публикация  НЕ выводится в списке новостей.
+        </li>
+
+    </ul>
+
+
+     <ul>
+        <h2> Разрешить комментарии </h2>
+        <li>
+         Если не выбрано - публикацию нельзя комментировать.      </li>
+        <li>
+            Используйет эту опцию, например, для страниц типа НЕ новость .
+
+        </li>
+
+    </ul>
+
+</div>
+
+
+<div id="footer">
+
+    <p><a  href="index.html">На главную</a> | <a href="#top">Наверх страницы</a></p>
+
+    <p>&copy; 2010 <a href="http://dakota-cms.com">Dakota CMS</a></p>
+
+
+</div>
+
+
+</body>
+</html>

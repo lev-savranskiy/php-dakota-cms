@@ -1,0 +1,117 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+
+    <title>Dakota CMS : руководство пользователя</title>
+
+    <link rel='stylesheet' type='text/css' media='all' href='userguide.css'/>
+
+
+    <link rel="icon" href="/favicon.ico" type="image/x-icon"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv='expires' content='-1'/>
+    <meta http-equiv='pragma' content='no-cache'/>
+    <meta name='robots' content='all'/>
+    <meta name='author' content='Dakota CMS Dev Team'/>
+    <meta name='description' content='Руководство по  Dakota CMS на русском языке'/>
+    <meta name='keywords'
+          content='Dakota CMS, codeigniter, фреймворк, руководство, описание,cms, php, разработка, программирование, модель, отображение, контроллер'/>
+
+</head>
+<body>
+
+<table cellpadding="0" cellspacing="0" border="0" style="width:100%">
+    <tr>
+        <td id="breadcrumb">
+
+            <a href="http://dakota-cms.com" target="_blank">Dakota CMS Home</a> | <a href="/" target="_blank">Project
+            Home</a> | <a  href="index.html"  name="top">Documentation Home</a>
+
+        </td>
+
+    </tr>
+</table>
+
+<div id="masthead">
+    <table cellpadding="0" cellspacing="0" border="0" style="width:100%">
+        <tr>
+            <td><h1> Dakota CMS, руководство пользователя к версии 0.4</h1></td>
+
+        </tr>
+    </table>
+</div>
+
+
+<div id="content">
+
+    <h1> Виджеты для SIDEBAR</h1>
+
+
+    <h2>Информация </h2>
+
+    <ul>
+        <li> Виджеты - маленькие куски кода, которые выводятся в боковую панель
+            внутри тэга &lsaquo;div id="sidebar"&rsaquo;
+
+        </li>
+        <li> Виджеты могут содержать php, javascript и html</li>
+        <li>Виджеты подключаются по алфавиту, поэтому для смены порядка вывода просто переименуйте их</li>
+        <li> Включить/отключить - в коде виджета укажите $widget_info['active'] = 1 или 0 соотв.</li>
+
+    </ul>
+
+    <h2>Создать свой виджет просто </h2>
+
+    <ul>
+        <li>Cкопируйте любой виджет в папке /widgets/ и назовите по шаблону 04_mywidget.php</li>
+        <li>Заполните информацию о разработке
+
+            <textarea rows="4" cols="50" style="width: 100%;" class="textarea">
+                $widget_info[title]
+                $widget_info[description]
+                $widget_info[url]
+            </textarea>
+
+        </li>
+        <li>Рзместите свой код между комментариями
+
+            <textarea rows="4" cols="50" style="width: 100%;" class="textarea">
+                //start your code here
+                ...
+                // end your code here
+            </textarea>
+
+
+        </li>
+        <li>Пишите на нативном PHP или объявите $CI = &amp; get_instance() и пользуйтесь <a href="/user_guide/">Codeiginter</a>
+        </li>
+          <li>Поделитесь разработкой с  <a href="http://dakota-cms.com/forums/" target="_blank">сообществом</a>
+          </li>
+        <li>Подключение автоматическое, поэтому не выгружайте неотлаженный Виджет на продакшн-сервер. Убедитесь, что
+            Виджет нормально отображается в основных брузерах и в списке Админе-центра.
+        </li>
+
+    </ul>
+
+
+    <p class="center">
+        <img src="img/_prev_widgets.jpg" alt=""/>
+    </p>
+
+
+</div>
+
+
+<div id="footer">
+
+    <p><a  href="index.html">На главную</a> | <a href="#top">Наверх страницы</a></p>
+
+    <p>&copy; 2010 <a href="http://dakota-cms.com">Dakota CMS</a></p>
+
+
+</div>
+
+
+</body>
+</html>

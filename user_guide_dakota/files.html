@@ -1,0 +1,103 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+
+<title>Dakota CMS : руководство пользователя</title>
+
+<link rel='stylesheet' type='text/css' media='all' href='userguide.css' />
+
+
+<link rel="icon" href="/favicon.ico" type="image/x-icon" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv='expires' content='-1' />
+<meta http-equiv= 'pragma' content='no-cache' />
+<meta name='robots' content='all' />
+<meta name='author' content='Dakota CMS Dev Team' />
+<meta name='description' content='Руководство по  Dakota CMS на русском языке' />
+<meta name='keywords' content='Dakota CMS, codeigniter, фреймворк, руководство, описание,cms, php, разработка, программирование, модель, отображение, контроллер' />
+    <link  href="../templates/common/css/filestorage.css" rel="stylesheet" type="text/css" />
+      <script language="javascript" type="text/javascript" src="../templates/common/js/jquery-1.4.2.min.js"></script>
+      <script language="javascript" type="text/javascript" src="../templates/common/js/filestorage.js"></script>
+      <script language="javascript" type="text/javascript" src="../templates/common/js/copyToClipboard.js"></script>
+
+</head>
+<body>
+
+<table cellpadding="0" cellspacing="0" border="0" style="width:100%">
+	<tr>
+		<td id="breadcrumb">
+
+           <a href="http://dakota-cms.com"  target="_blank">Dakota CMS Home</a> |   <a href="/" target="_blank">Project Home</a> | <a  href="index.html"  name="top">Documentation Home</a>
+
+		</td>
+
+	</tr>
+</table>
+
+<div id="masthead">
+<table cellpadding="0" cellspacing="0" border="0" style="width:100%">
+<tr>
+<td><h1> Dakota CMS, руководство пользователя к версии 0.4</h1></td>
+
+</tr>
+</table>
+</div>
+
+
+
+
+<div id="content"><h1> Работа с  файлами</h1>
+
+
+      <ul>
+        <li>Файлы хранятся в папке /uploads/files/.</li>
+        <li>Вы можете использовать их для вставки картинок и ссылок на загрузки в текст публикаций, страницах загрузки и т.п.</li>
+        <li>Файлы  разбиваются на группы   Documents, Images, Archives,  Music,  Video по расширению</li>
+        <li>Запрещены файлы php,php3,php4,php5,phtml,phps,exe,bin,bat,sh</li>
+        <li>Максимальный размер файла указан в строке upload_max_filesize  файла php.ini.</li>
+        <li>Максимальный размеры для картинок 2560 на 1600px</li>
+        <li>Пусть к php.ini указан в строке Loaded Configuration File  phpinfo. Обратитесь к администратору, если у Вас нет туда доступа.</li>
+       <li>Нажмите кнопку Copy link, чтобы использовать ссылку на файл в тексте
+           <a href="articles.html">Публикации</a></li>
+        <li>Поведение кнопки Copy link зависит от настроек браузера. Если она не работает, копируйте ссылку,
+            через меню  правой кнопки на Copy link</li>
+            <li><b> <img src="img/icon_important_24.gif"/> Файлы НЕ  выводятся на сайте сами</b></li>
+
+    </ul>
+
+
+    <div >
+        <b>Кликабельно! </b>
+<ul id="menu">
+         <li class="active"><a href="">All files</a></li>
+        <li class=""><a href="">Documents</a></li>
+        <li class=""><a href="">Images</a></li>
+        <li class=""><a href="">Archives</a></li>
+        <li class=""><a href="">Music</a></li>
+        <li><a href="">Video</a></li>
+ </ul>
+    </div>
+<ul id="files">  <li class="Music" style="display: list-item;"><span style="display: block;"><a onclick="window.open('/uploads/files/fun_fun_fun.mid', '_blank', 'width=600,height=400,scrollbars=yes,status=no,resizable=yes,screenx=0,screeny=0');" href="javascript:void(0);">fun_fun_fun.mid</a></span>  Size: 62.64 KB  Created: July 19 2010 16:45:55. <a style="background: none repeat scroll 0% 0% transparent;" onclick="return copyTitleInLink(this);" href="/uploads/files/fun_fun_fun.mid">copy link</a> <a style="background: none repeat scroll 0% 0% transparent;" href="javascript:alert('Файл удаляется');">delete</a> </li> 
+<li class="Images" style="display: list-item;"><span style="display: block;"><a onclick="window.open('/uploads/files/nature.jpg', '_blank', 'width=600,height=400,scrollbars=yes,status=no,resizable=yes,screenx=0,screeny=0');" href="javascript:void(0);">nature.jpg</a></span>  Size: 31 KB  Created: July 19 2010 16:48:53. <a style="background: none repeat scroll 0% 0% transparent;" onclick="return copyTitleInLink(this);" href="/uploads/files/nature.jpg">copy link</a> <a style="background: none repeat scroll 0% 0% transparent;" href="javascript:alert('Файл удаляется');">delete</a> </li>
+<li class="Archives" style="display: list-item;"><span style="display: block;"><a href="/uploads/files/test.zip">test.zip</a></span>  Size: 121 B  Created: July 19 2010 16:47:23. <a style="background: none repeat scroll 0% 0% transparent;" onclick="return copyTitleInLink(this);" href="/uploads/files/test.zip">copy link</a> <a style="background: none repeat scroll 0% 0% transparent;" href="javascript:alert('Файл удаляется');">delete</a> </li>
+<li class="Documents" style="display: list-item;"><span style="display: block;"><a onclick="window.open('/uploads/files/test.txt', '_blank', 'width=600,height=400,scrollbars=yes,status=no,resizable=yes,screenx=0,screeny=0');" href="javascript:void(0);">test.txt</a></span>  Size: 4 B  Created: July 19 2010 16:46:50. <a style="background: none repeat scroll 0% 0% transparent;" onclick="return copyTitleInLink(this);" href="/uploads/files/test.txt">copy link</a> <a style="background: none repeat scroll 0% 0% transparent;" href="javascript:alert('Файл удаляется');">delete</a> </li>
+</ul>
+
+
+
+    
+</div>
+
+<div id="footer">
+
+	 <p> <a  href="index.html">На главную</a> |  <a href="#top">Наверх страницы</a></p>
+	<p>&copy; 2010 <a href="http://dakota-cms.com">Dakota CMS</a></p>
+
+
+</div>
+
+
+
+
+</body>
+</html>

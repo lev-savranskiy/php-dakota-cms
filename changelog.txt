@@ -1,0 +1,41 @@
+Copyright (c) 2010, Dakota-CMS.com
+All rights reserved.
+
+Author: Lev Savranskiy
+
+=== Version 0.4 ===
+30-08-2010
+     * Moved Application folder  to root
+     * Added Autocomplete ( articles  tags, cities, countries)
+     * Added Vkontakte, Twitter, Facebook  API
+     * Added Admin-panel Caching function
+     * Added Admin-panel Menu Building
+     * Added Password protection template for 'stats' directory
+     * Added i18n (Russian/English)
+     * Added Google translator (4 languages)
+     * Added phpdoc
+
+
+=== Version 0.1 ===
+21-08-2010
+     * Fix CSRF admin panel hack
+     * Fix Audistats sql-injection
+
+
+=== Version 0.2 ===
+18-08-2010
+    * Added Admin-panel: templates manager
+    * Added anonymous comments
+    * Added Admin-panel  benchmark on the whole site
+    * Added site lock screen while  fixtures loading is in  progress
+
+
+=== Version 0.1 ===
+12-08-2010
+    * Project initiation
+
+
+=== Thanks ===
+    * andrew ivanov
+    * vlad merk
+    * Burak

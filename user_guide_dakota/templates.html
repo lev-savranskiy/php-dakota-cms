@@ -1,0 +1,276 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+
+    <title>Dakota CMS : руководство пользователя</title>
+
+    <link rel='stylesheet' type='text/css' media='all' href='userguide.css'/>
+    <link rel="stylesheet" type="text/css" href="../templates/common/css/jquery.lightbox-0.5.css" media="screen"/>
+    <script type="text/javascript" src="../templates/common/js/jquery-1.4.2.min.js"></script>
+    <script type="text/javascript" src="../templates/common/js/jquery.lightbox-0.5.min.js"></script>
+
+    <script type="text/javascript"> $(function() {
+        $('a.lightbox').lightBox();
+    }); </script>
+
+
+    <link rel="icon" href="/favicon.ico" type="image/x-icon"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv='expires' content='-1'/>
+    <meta http-equiv='pragma' content='no-cache'/>
+    <meta name='robots' content='all'/>
+    <meta name='author' content='Dakota CMS Dev Team'/>
+    <meta name='description' content='Руководство по  Dakota CMS на русском языке'/>
+    <meta name='keywords'
+          content='Dakota CMS, codeigniter, фреймворк, руководство, описание,cms, php, разработка, программирование, модель, отображение, контроллер'/>
+
+</head>
+<body>
+
+<table cellpadding="0" cellspacing="0" border="0" style="width:100%">
+    <tr>
+        <td id="breadcrumb">
+
+            <a href="http://dakota-cms.com" target="_blank">Dakota CMS Home</a> | <a href="/" target="_blank">Project
+            Home</a> | <a href="index.html" name="top">Documentation Home</a>
+
+        </td>
+
+    </tr>
+</table>
+
+<div id="masthead">
+    <table cellpadding="0" cellspacing="0" border="0" style="width:100%">
+        <tr>
+            <td><h1> Dakota CMS, руководство пользователя к версии 0.4</h1></td>
+
+        </tr>
+    </table>
+</div>
+<div id="content">
+<h1> Шаблоны для сайта</h1>
+
+
+<ul>
+    <h2>Информация</h2>
+    <li> Шаблоны - куски кода, которые подключаются в стандартные шаблоны движка и полностью меняют внешний вид
+        сайта.
+    </li>
+    <li> Шаблоны находятся в папке /templates/ и могут содержать css, javascript и html</li>
+    <li> Папка /templates/common/ обслуживает весь сайт и не подлежит удалению или изменению</li>
+    <li> Jquery-1.4.2 подключен на каждой странице</li>
+    <li> Шаблоны для демонстрации возможности кастомизации взяты с сайта
+        <a href="http://www.freelayouts.com/websites/html-templates/2-Column" target="_blank">freelayouts</a>.
+
+        Для Dakota CMS подходят
+        <a href="http://www.google.ru/images?q=free+wp+theme" target="_blank">тысячи бесплатных шаблонов
+            WordPress</a>.
+
+        Несомненно, понядобятся правки, но в целом они кастомизируются крайне просто.
+        Переделка каждого из нижеприведенных шаблонов заняла не более пяти минут.
+
+
+    </li>
+
+    <div class="left" style="padding: 20px;">
+        <p>decorative <a href="../templates/decorative/dummy.html" target="_blank">[HTML]</a></p>
+
+        <p>
+            <small>Меню и sidebar слева</small>
+        <p><a href="../templates/decorative/img/full.png" class="lightbox"><img
+                src="../templates/decorative/img/thumb.png" width="128"></a></p></div>
+
+
+    <div class="left" style="padding: 20px;">
+        <p>default <a href="../templates/default/dummy.html" target="_blank">[HTML]</a></p>
+        <small>Меню сверху, sidebar справа</small>
+
+        <p><a href="../templates/default/img/full.png" class="lightbox"><img
+                src="../templates/default/img/thumb.png"
+                width="128"></a></p></div>
+
+
+    <div class="left" style="padding: 20px;">
+        <p>lightspeed <a href="../templates/lightspeed/dummy.html" target="_blank">[HTML]</a></p>
+        <small>Меню сверху, sidebar справа</small>
+        <p><a href="../templates/lightspeed/img/full.png" class="lightbox"><img
+                src="../templates/lightspeed/img/thumb.png" width="128"></a></p></div>
+
+
+    <div class="clear"></div>
+
+</ul>
+
+
+<ul>
+    <h2>Соглашение о именах и принципы верстки</h2>
+    <li>Для упрощения разработки иcпользуется именование частей страницы</li>
+    <li> id #container, #profile-link, #page, #content, #sidebar зашиты в шаблонизаторе CMS.
+        Таким образом, вы не можете переименовать их, но можете полностью переопределить их вид с помощью css
+    </li>
+
+    <li> В шаблонах header.tpl и footer.tpl Вы можете делать с версткой все, что угодно
+    </li>
+    <li> Вывести любую информацию в блок #sidebar вы можете с помощью <a href="widgets.html">виджетов</a></li>
+    <li> Вывести информацию в блок #content .post .entry вы можете с помощью <a href="articles.html">публикаций</a>
+    </li>
+    <li> Работа с информацией в произвольном месте блока #content
+        <ul>
+            <li> псевдоселекторы :after, :before
+                <br/>
+                Например, этот CSS код выводит смайлик до и слово TEST после даты публикации.
+                <br/> <br/>
+                <textarea rows="10" cols="50" style="width: 400px;" class="textarea">
+                    .day:before
+                    {
+                    content:url('/templates/mytemplate/img/smiley.gif);
+                    }
+                    .day:after{
+                    content: "TEST ";
+                    }
+
+                </textarea>
+            </li>
+            <li>
+                jQuery - Сменить содержимое
+                <br/> <br/>
+                $("div.post ").html("<span class='red'>Hello <b>Again</b></span>");
+                <br/>
+                $("div.post").text("Hello <b>Again</b>");
+            </li>
+            <li>
+                jQuery - Скрыть элемент
+                <br/> <br/>
+                $("div.post ").remove();
+
+            </li>
+            Если вы владеете версткой, то для вас не составит труда разобраться в устройстве публикации и прочих
+            страниц.
+
+        </ul>
+
+
+    </li>
+
+    <a name="profile-link"></a>
+    <li> Если Вам не нужен раздел авторизации наверху страницы или вы хотите кастомизировать его с помощью
+        javascript,
+        Вы можете скрыть #profile-link в <a href="settings.html">настройках сайта</a></li>
+    <li> При этом все данные о юзере по-прежнему доступны в javascript. На <a href="/">сайте</a> кликните правой
+        кнопкой и выберите просмотр HTML кода, чтобы просмотреть свои данные в <b>Object userdata</b> в начале
+        страницы.
+    </li>
+    <li><b><img src="img/icon_important_24.gif"/> как бы ни было заманчиво поправить верстку самой CMS, работайте
+        только с файлами в папке /templates/. Изменив файлы в папке \system\application\views вы не сможете
+        устанавливать обновления CMS - они порушат вашу верстку.</b></li>
+
+
+</ul>
+
+<ul>
+    <h2>Основной шаблон</h2>
+    <img src="img/layout.png"/>
+
+</ul>
+
+
+<ul>
+
+    <h2>Шаблон публикации</h2>
+    <img src="img/_prev_entry.jpg"/>
+
+</ul>
+
+<ul>
+    <h2>Создание своего шаблона с нуля</h2>
+
+    <li>Cкопируйте любой шаблон в папке /templates/ и назовите по своему усмотрению (Примеры приведены для названия
+        mytemplate)
+    </li>
+    <li>Загрузите графику в папку /templates/mytemplate/img
+    </li>
+
+</ul>
+
+<ul>
+    <h2>Изменение стороннего шаблона</h2>
+
+    <li>Cкопируйте шаблон в папку /templates/</li>
+    <li>Cкопируйте файлы footer.tpl, header.tpl, dummy.html из любого существующего шаблона</li>
+    <li>Стиль дожен быть по пути /templates/mytemplate/css/style.css</li>
+    <li>Папка с картинками - /templates/mytemplate/img</li>
+    <li>Перепишите пути к картинкам в css, если необходимо.</li>
+</ul>
+
+<ul>
+    <h2>Приступаем к работе</h2>
+    <li>Редактируйте файл style.css</li>
+    <li>Скрипты и стили для оформления определенной новости складывайте в любом удобном вам месте. Например
+        /templates/mytemplate/extra/. Пути к ним нужно указать прямо в тексте публикации.
+    </li>
+    <li>Редактируйте файл dummy.html, не забывая о соглашении о именах</li>
+</ul>
+
+<ul>
+    <h2>Использование многоязычных выражений в шаблоне</h2>
+    <li> Все доступные слова и фразы вы можете найти в файле dakota_lang.php
+        <a href="i18n.html">Подробнее о кастомизации языков</a></li>
+
+    Пример использования - ссылка 'наверх' в шаблоне   <a href="/templates/default/footer.tpl">footer.tpl</a> <br/> <br/>
+    <textarea rows="4" cols="50" style="width: 400px;" class="textarea">
+        <a href="#top">
+            <?=  lang('dakota_up')?>
+        </a>
+
+    </textarea>
+</ul>
+
+
+<ul>
+    <h2>Создание скриншотов</h2>
+    <li> Скриншоты шаблона должны быть в папке /templates/mytemplate/img/full.png (ширина 600px),
+        /templates/mytemplate/img/thumb.png (128x93px)
+    </li>
+    <li>Пока нет скриншотов, система считает шаблон незавершенным, и вы не сможете пользоваться им.</li>
+</ul>
+
+<ul>
+    <h2>Использование шаблона</h2>
+
+    <li>
+        Если вы удовлетворены видом файла dummy.html вашего нового шаблона, перенесите соотв. части dummy.html в
+        footer.tpl, header.tpl
+    </li>
+
+    <li> Примените шаблон, нажав кнопку [Установить] в админ-центре.
+    </li>
+
+    <li> Если не подгрузились стили или графика, убедитесь, что пути к ним начинаются так
+        /templates/mytemplate/img... а не ../mytemplate/img/...
+
+    </li>
+
+    <li> Подкорректируйте параметры и порядок <a href="widgets.html">виджетов</a> - возможно, некоторые не впишутся
+        в новый дизайн.
+    </li>
+    </li>
+    <li>Поделитесь разработкой с <a href="http://dakota-cms.com/forums/" target="_blank">сообществом</a>
+    </li>
+</ul>
+
+</div>
+
+
+<div id="footer">
+
+    <p><a href="index.html">На главную</a> | <a href="#top">Наверх страницы</a></p>
+
+    <p>&copy; 2010 <a href="http://dakota-cms.com">Dakota CMS</a></p>
+
+
+</div>
+
+
+</body>
+</html>

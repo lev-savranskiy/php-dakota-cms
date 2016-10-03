@@ -1,0 +1,22 @@
+User:
+  Admin:
+    firstname: Administrator
+    lastname: Adminovitch
+    password: admin
+    email: admin@example.com
+    ip: 127.0.0.0
+    role: 100
+    active: 1
+    id: 1
+  Anonymous:
+    firstname: Anonymous
+    lastname: Vulgaris
+    password: Anonymous
+    email: anonymous@example.com
+    ip: 127.0.0.0
+    role: 10
+    active: 1
+    country: Internet
+    city: Various
+    id: 2
+

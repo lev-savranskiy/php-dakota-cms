@@ -1,0 +1,105 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+
+    <title>Dakota CMS : руководство пользователя</title>
+
+    <link rel='stylesheet' type='text/css' media='all' href='userguide.css'/>
+
+
+    <link rel="icon" href="/favicon.ico" type="image/x-icon"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv='expires' content='-1'/>
+    <meta http-equiv='pragma' content='no-cache'/>
+    <meta name='robots' content='all'/>
+    <meta name='author' content='Dakota CMS Dev Team'/>
+    <meta name='description' content='Руководство по  Dakota CMS на русском языке'/>
+    <meta name='keywords'
+          content='Dakota CMS, codeigniter, фреймворк, руководство, описание,cms, php, разработка, программирование, модель, отображение, контроллер'/>
+
+</head>
+<body>
+
+<table cellpadding="0" cellspacing="0" border="0" style="width:100%">
+    <tr>
+        <td id="breadcrumb">
+
+            <a href="http://dakota-cms.com" target="_blank">Dakota CMS Home</a> | <a href="/" target="_blank">Project
+            Home</a> | <a  href="index.html"  name="top">Documentation Home</a>
+
+        </td>
+
+    </tr>
+</table>
+
+<div id="masthead">
+    <table cellpadding="0" cellspacing="0" border="0" style="width:100%">
+        <tr>
+            <td><h1> Dakota CMS, руководство пользователя к версии 0.4</h1></td>
+
+        </tr>
+    </table>
+</div>
+
+
+<div id="content">
+
+    <h1> Сатистика</h1>
+
+
+    <h2>Информация </h2>
+
+    <ul>
+   
+        <li>
+            Чтобы включить сбор статистики проекта по ссылке <a href="/stats/">/stats/</a> , укажите в footer.tpl вашего шаблона строку
+            <textarea rows="2" cols="20" style="width: 100%;" class="textarea">
+                <?php include("./stats/stats.php"); ?>
+            </textarea>
+        </li>
+        <li>
+            В статистике не учитываются страницы админки и все, исключенное из <a href="routing.html">роутинга </a> в
+            .htaccess (например страница, которую вы сейчас читаете)
+
+        </li>
+
+        <li>
+            В целях безопасности вы можете удалить папку 'stats' из проекта.
+        </li>
+         <li>
+        Закрытие статистики по паролю
+                <ul>
+                    <li>
+
+                        В файле 'stats/.htaccess_template' заполните путь 'path-to-dakota'
+                    </li>
+                    <li>
+                        В файле 'stats/.htpasswd_template' укажите свои данные вместо admin:password
+                        <br /> <b>  Они не связаны с данными юзеров -  ни админов , ни модераторов!</b>
+
+                    </li>
+                    <li>
+                        Переименуйте файлы .htaccess_template в .htaccess, .htpasswd_template в .htpasswd
+
+                    </li>
+                    <li>
+                        Если все было сделано верно, то при обращении к статистике будет вызван диалог ввода пароля.
+                    </li>
+                 </ul>
+    </li>
+            </ul>
+
+
+            <div id="footer">
+
+                <p><a  href="index.html">На главную</a> | <a href="#top">Наверх страницы</a></p>
+
+                <p>&copy; 2010 <a href="http://dakota-cms.com">Dakota CMS</a></p>
+
+
+            </div>
+
+
+</body>
+</html>

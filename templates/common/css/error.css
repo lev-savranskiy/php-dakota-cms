@@ -1,0 +1,23 @@
+      a {
+          color: #111;
+      }
+
+        #error_page {
+            margin: 150px 33%;
+            width: 33%;
+             text-align: center;
+
+           }
+
+        #error_page p {
+            margin: 50px auto;
+
+        }
+
+         #error_page_cms_link {
+
+        }
+
+        #error_page_cms_link a {
+          font-size:smaller;  
+        }

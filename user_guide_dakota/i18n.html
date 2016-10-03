@@ -1,0 +1,187 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+
+    <title>Dakota CMS : руководство пользователя</title>
+
+    <link rel='stylesheet' type='text/css' media='all' href='userguide.css'/>
+
+
+    <link rel="icon" href="/favicon.ico" type="image/x-icon"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv='expires' content='-1'/>
+    <meta http-equiv='pragma' content='no-cache'/>
+    <meta name='robots' content='all'/>
+    <meta name='author' content='Dakota CMS Dev Team'/>
+    <meta name='description' content='Руководство по  Dakota CMS на русском языке'/>
+    <meta name='keywords'
+          content='Dakota CMS, codeigniter, фреймворк, руководство, описание,cms, php, разработка, программирование, модель, отображение, контроллер'/>
+
+</head>
+<body>
+
+<table cellpadding="0" cellspacing="0" border="0" style="width:100%">
+    <tr>
+        <td id="breadcrumb">
+
+            <a href="http://dakota-cms.com" target="_blank">Dakota CMS Home</a> | <a href="/" target="_blank">Project
+            Home</a> | <a  href="index.html"  name="top">Documentation Home</a>
+
+        </td>
+
+    </tr>
+</table>
+
+<div id="masthead">
+    <table cellpadding="0" cellspacing="0" border="0" style="width:100%">
+        <tr>
+            <td><h1> Dakota CMS, руководство пользователя к версии 0.4</h1></td>
+
+        </tr>
+    </table>
+</div>
+
+
+<div id="content">
+
+    <h1> Интернационализация и кастомизация языка.</h1>
+
+
+    <h2>Информация </h2>
+
+
+
+            <ul>
+                <li>     Dakota CMS поставляется с двумя языками ("russian", "english").
+                </li>
+                <li> Вы можете подключить переводчик Google (три языка) в разделе <a href="api.html">API</a>
+                </li>
+
+                </ul>
+   
+
+    <h2>
+        Для кастомизации текущего языка или перевода системы на новый язык, например 'deutsch' необходимо выполнить
+        следующие действия
+    </h2>
+    <ol>
+
+
+        <li>
+            Файл dakota_lang.php
+        </li>
+
+        <ul>
+            <li>
+                В файле dakota_lang.php хранятся все слова и выражения, используемые в системе.
+                Их можно использовать в <a href="menu.html">меню</a> и  <a href="templates.html">шаблонах</a> 
+            </li>
+            <li>
+                <b> Создание нового языка:</b> Скопируйте файл application/language/<b>english</b>/dakota_lang.php в
+                application/language/<b>deutsch</b>/dakota_lang.php
+            </li>
+            <li>
+                Сделайте перевод всех строк файла на новый язык или правки текущего.
+            </li>
+
+        </ul>
+        <li>
+            Файл config_[lang].php
+        </li>
+
+        <ul>
+            <li>
+                Файл содержит специфическую информацию о языке и стране использования: списки стран и городов для
+                автозаполнения профиля, настройки пользователя, именование ролей (влияют на весь сайт) и разделов сайта
+                (не влияют на вывод меню).
+
+            </li>
+            <li>
+                <b> Создание нового языка:</b> Скопируйте файл application/config/config_<b>english</b>.php и разместите как
+                application/config/config_<b>deutsch</b>.php
+            </li>
+            <li>
+                При необхдимости, внесите правки в файл application/config/config_deutsch.php - например, добавьте
+                больше
+                немецких городов или специфические сайты для указания в профиле пользователей в
+                $config['site_user_settings'].
+            </li>
+            <li>
+                При добавлении нового поля в $config['site_user_settings'] сделайте иконку 16x16 по пути
+                \templates\common\img\icon_[имя поля].png
+
+                <pre>
+                    Пример:
+                     'deutsche_facebook' => array('deutsche_facebook', 'trim|valid_url')
+                   </pre>
+                В таком случае добавьте иконку \templates\common\img\icon_<b>deutsche_facebook</b>.png
+
+            </li>
+            <li>
+                Вы можете удалить  любые пункты $config['site_user_settings']. В  профиле всегда останутся
+                 пункты Имя, Фамилия, Город, Страна.
+
+            </li>
+
+        </ul>
+
+
+        <li>
+            <b>Подключение нового языка.</b>
+
+            <ul>
+                <li> Измените в файле application/config/config.php текущий язык на "deutsch"
+               <pre>
+
+            $config['language'] = "deutsch";
+               </pre>
+                    Если все было сделано верно, сайт и админ-панель станет работать на новом языке.
+                </li>
+
+            </ul>
+        </li>
+
+
+        <li>
+            <b>Создание многоязычных сайтов</b>
+
+            <ul>
+                <li> Создание многоязычных статей и форумов в текущей версии dakota-cms не предусмотрено.
+                    Решение пока видится таким -
+
+                    <ul>
+                        <li>
+                        Вынести  папку SYSTEM на уровень сервера
+                        </li>
+                        <li>
+                           Создание поддоменов, каждый из которых будет работать на общем ядре dakota cms
+                        </li>
+                    </ul>
+                </li>
+                <li> Плюсы - версии будут отличаться только одним пунктом - $config['language'] и шаблонами header,
+                    footer.
+                </li>
+
+                <li> Минусы - несовместимость баз данных.
+                </li>
+            </ul>
+        </li>
+
+
+    </ol>
+
+
+</div>
+<div id="footer">
+
+    <p><a  href="index.html">На главную</a> | <a href="#top">Наверх страницы</a></p>
+
+    <p>&copy; 2010 <a href="http://dakota-cms.com">Dakota CMS</a></p>
+
+
+</div>
+
+
+</body>
+</html>

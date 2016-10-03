@@ -1,0 +1,2 @@
+Sitemap: http://dakota-cms.loc/sitemap.xml
+Sitemap: http://dakota-cms.loc/sitemap.xml.gz

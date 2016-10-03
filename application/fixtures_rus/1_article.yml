@@ -1,0 +1,52 @@
+Article:
+  a1:
+    title: Доступ в админ-панель
+    text: <p>Спасибо за интерес к  <a href="http://Dakota-CMS.com">Dakota CMS</a>!</p><p>Для использования админ-панели залогиньтесь с данными: </p> <p>логин - admin@example.com <br />пароль - admin </p><p> Если Вы инсталлировали систему, то введите данные, указанные при установке.</p>
+    url: pervaya_novost
+    tag1: Новый
+    tag2: сайт
+    tag3: CMS
+    tag4: dakota
+    tag5: php
+    author_id: 1
+    is_visible: 1
+    is_main: 1
+    can_be_commented: 1
+  a2:
+    title: О проекте
+    text:  Dakota CMS является инструментарием для тех, кто строит сайты.  <a href="http://Dakota-CMS.com">Dakota CMS</a>  позволяет творчески сосредоточиться на ваших проектах, используя минимальный объема кода, необходимый для той или иной задачи. Вы можете создать простой сайт визитку за вечер, не обладая познаниями в PHP - ведь после установки все операции по работе с данными можно производить из простой Админ -панели.
+    url:  about
+    tag1: о нас
+    tag2: dakota
+    tag3: CMS
+    tag4: php
+    tag5: hey
+    author_id: 1
+    is_visible: 1
+    is_page: 1
+  a5:
+    title: Загрузки
+    text: <h3> Новейшие загрузки для вас!</h3>  <p><a href="/uploads/files/fun_fun_fun.mid"><br><br>Мелодия fun_fun_fun</a><br><br><a href="/uploads/files/nature.jpg">Новая фотка</a><br><br><a href="/uploads/files/test.zip">Важный архив</a></p>
+    url:  files
+    tag1: files
+    tag2: Загрузки
+    tag3: free
+    tag4: скачать
+    tag5: файлы
+    author_id: 1
+    is_visible: 1
+    is_page: 1
+  a3:
+    title: CodeIgniter - Getting Started
+    text: http://www.youtube.com/watch?v=2fEkcht8TCo
+    url:  CodeIgniter_Getting_Started
+    tag1: CodeIgniter
+    tag2: video
+    tag3: sreencast
+    tag4: tutorial
+    tag5: php
+    author_id: 1
+    is_visible: 1
+    can_be_commented: 1
+
+

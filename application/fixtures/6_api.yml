@@ -1,0 +1,7 @@
+Api_settings:
+  main:
+    vk_api_id: 0
+    vk_api_widget_club_id: 20124072
+    vk_api_widget_club_width: 300
+    use_facebook_share: 1
+    use_twitter_share: 1

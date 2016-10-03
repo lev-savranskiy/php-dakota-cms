@@ -1,0 +1,27 @@
+Menu_model:
+  News:
+    order_id: 1
+    title: Новости
+    url: /articles
+  Main:
+    order_id: 2
+    title: Галерея
+    url: /gallery
+  Forum:
+    order_id: 3
+    title: Форум
+    url: /forums
+  Doc:
+    order_id: 4
+    title: Документация
+    url: /user_guide_dakota
+  users:
+    order_id: 5
+    title: Люди
+    url: /users
+  users:
+    order_id: 5
+    title: О проекте
+    url: /articles/title/about
+
+

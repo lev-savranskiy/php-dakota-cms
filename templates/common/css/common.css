@@ -1,0 +1,189 @@
+/* v1.0 | 20080212 */
+
+html, body, div, span, applet, object, iframe,
+p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+
+input, textarea {
+-webkit-border-radius: 7px;
+-moz-border-radius: 7px;
+border-radius: 7px;
+}
+
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+
+
+ol, ul {
+	list-style: none;
+}
+
+
+/* remember to define focus styles! */
+:focus {
+    outline: 0;
+}
+
+
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.small, .small a {
+    font-size: smaller !important;
+
+}
+
+.larger, .larger a {
+    font-size: larger !important;
+
+}
+
+
+
+.margin-bottom{
+    margin-bottom: 10px;
+}
+
+.bold {
+    font-weight: bold;
+}
+.overflow-hidden {
+    overflow: hidden;
+}
+
+.text-left {
+    text-align: left !important;
+}
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.right {
+    float: right;
+}
+
+.left {
+    float: left;
+}
+
+.clear {
+    clear: both;
+}
+
+.none {
+    display:none;
+}
+
+.block {
+    display:block;
+}
+
+.pointer{
+    cursor:pointer !important;
+}
+/* error */
+.error , .error a {
+    color: red;
+}
+
+.error-border {
+    border: red 1px solid;
+    padding: 5px;
+}
+
+
+/* pager */
+.pagination {
+    text-align: center;
+}
+
+#benchmark{
+    border: 1px red;
+    background: #8E3A00 ;
+   -moz-opacity:.35 !important;
+    opacity:.35 !important;
+    filter:alpha(opacity=35);
+    color: #fff;
+    position: fixed;
+    width: 100px;
+    top: 50px;
+    right: 5px;
+    padding: 1px 10px;
+    z-index: 1;
+    font-size: 10px;
+}
+
+#loader{
+    text-align:center;
+    position:absolute;
+    z-index: 1;
+}
+
+/* search highlight */
+.highlight  {
+color:#990000 !important;
+    background-color:yellow;
+    padding: 5px;
+}
+
+/* search highlight */
+.highlight a  {
+color:#222 !important;
+text-decoration:underline;
+
+}
+
+/* api styles */
+#google_translate_element div {
+    display:inline;
+
+}
+
+#google_translate_element div div img{
+    display:none;
+}
+
+#facebook_connect_widget{
+    background-color: #fff !important;
+       -moz-border-radius: 7px;
+      -webkit-border-radius: 7px;
+   border: 1px #E6E7E6 solid;
+    margin: 0 0 10px 0;
+    padding: 5px 0  5px 10px ;
+    color: #2A3644;
+}
+
+#vkshare0 {
+    float:left;
+    border: 1px red solid;
+}

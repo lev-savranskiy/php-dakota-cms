@@ -1,0 +1,40 @@
+Article:
+  a1:
+    title: О проекте / About
+    text:  <a href="http://Dakota-CMS.com">Dakota CMS</a> is a tool for those who build web sites. Dakota CMS allows you to creatively focus on your projects, using a minimal amount of code needed for a given task.<br /> Switch to <a href="/en/">English</a> &harr; <a href="/login/">login</a> &harr; <a href="/admin/">admin panel demonstration</a><br /><br /> <a href="http://Dakota-CMS.com">Dakota CMS</a> является инструментарием для тех, кто строит сайты. Dakota CMS позволяет творчески сосредоточиться на ваших проектах, используя минимальный объема кода, необходимый для той или иной задачи. Вы можете создать простой сайт визитку за вечер, не обладая познаниями в PHP - ведь после установки все операции по работе с данными можно производить из простой <a href="/login">Админ -панели.</a> 
+    url:  about
+    tag1: о нас
+    tag2: dakota
+    tag3: CMS
+    tag4: php
+    tag5: hey
+    author_id: 1
+    is_visible: 1
+    is_main: 1
+    can_be_commented: 1
+  a2:
+    title: Загрузки / Downloads
+    text: <p><a href="http://dakota-cms.com/download.php?type=file" class="larger">Download Dakota CMS</a> <br><br> <b>Test downloads </b><br><a href="/uploads/files/fun_fun_fun.mid">Beach boys - fun fun fun (mid) </a><br><a href="/uploads/files/nature.jpg">Test Picture</a><br><a href="/uploads/files/test.zip">Test Archive</a></p>
+    url:  files
+    tag1: файлы
+    tag2: Загрузки
+    tag3: free
+    tag4: скачать
+    tag5:
+    author_id: 1
+    is_visible: 1
+    can_be_commented: 1
+  a3:
+    title: CodeIgniter - Getting Started
+    text: Video link usage example  / Демонстрация конвертации ссылки в видео http://www.youtube.com/watch?v=2fEkcht8TCo
+    url:  CodeIgniter_Getting_Started
+    tag1: CodeIgniter
+    tag2: video
+    tag3: sreencast
+    tag4: tutorial
+    tag5: php
+    author_id: 1
+    is_visible: 1
+    can_be_commented: 1
+
+

@@ -1,0 +1,19 @@
+Forum_category:
+  Lounge:
+    title:  Новый форум
+    Forums: [Forum_1]
+Forum:
+  Forum_1:
+    title: Обсуждение нашего супер сайта
+    description:    Общие мнения и предложения по улучшению проекта 
+Thread:
+  Thread_1:
+    title: Hi there!
+    Forum: Forum_1
+
+Post:
+  Post_1:
+    Thread: Thread_1
+    User: Admin
+    content:  Итак, проект запущен! Если Вы знаете, как сделать <a href="http://Dakota-CMS.com">Dakota CMS</a>  лучше, пишите support@dakota-cms.com
+

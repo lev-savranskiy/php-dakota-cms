@@ -1,0 +1,182 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+
+<title>Dakota CMS : руководство пользователя</title>
+
+<link rel='stylesheet' type='text/css' media='all' href='userguide.css' />
+
+
+<link rel="icon" href="/favicon.ico" type="image/x-icon" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv='expires' content='-1' />
+<meta http-equiv= 'pragma' content='no-cache' />
+<meta name='robots' content='all' />
+<meta name='author' content='Dakota CMS Dev Team' />
+<meta name='description' content='Руководство по  Dakota CMS на русском языке' />
+<meta name='keywords' content='Dakota CMS, codeigniter, фреймворк, руководство, описание,cms, php, разработка, программирование, модель, отображение, контроллер' />
+
+</head>
+<body>
+
+<table cellpadding="0" cellspacing="0" border="0" style="width:100%">
+	<tr>
+		<td id="breadcrumb">
+
+           <a href="http://dakota-cms.com"  target="_blank">Dakota CMS Home</a> |   <a href="/" target="_blank">Project Home</a> | <a  href="index.html"  name="top">Documentation Home</a>
+
+		</td>
+
+	</tr>
+</table>
+
+<div id="masthead">
+<table cellpadding="0" cellspacing="0" border="0" style="width:100%">
+<tr>
+<td><h1> Dakota CMS, руководство пользователя к версии 0.4</h1></td>
+
+</tr>
+</table>
+</div>
+
+
+
+
+<div id="content"><h1> Dakota CMS для Вас</h1>
+
+
+<h2> Dakota CMS &mdash; это простая CMS с широкими возможностями</h2>
+
+<p> Dakota CMS является инструментарием для тех, кто строит сайты.
+  Dakota CMS позволяет творчески сосредоточиться на ваших проектах,
+используя минимальный объема кода, необходимый для той или иной задачи.
+ Вы можете создать простой сайт визитку за вечер, не обладая познаниями в PHP - ведь после установки все операции по работе
+    с данными можно производить из простой <a href="articles.html">Админ -панели</a>.
+   Для продвинутых пользователей же нет ничего невозжного - напишите модель Магазина и поделитесь ею с  <a href="http://dakota-cms.com/forums/" target="_blank">сообществом</a> !
+     Пишите на нативном PHP или объявите $CI = & get_instance() и пользуйтесь <a href="/user_guide/">CodeIgniter</a>!
+
+</p>
+
+<h2>Проект Dakota CMS бесплатен</h2>
+<p> Dakota CMS лицензирован под Apache/BSD-style open source license для того, чтобы вы могли использовать его как угодно.
+Для получения дополнительной информации прочитайте <a href="license.html">лицензионное соглашение</a>.</p>
+
+
+
+
+
+    <h2> Dakota CMS содержит все необходимое для создания  сайта</h2>
+    <p> Dakota CMS текущей версии поставляется  с модулями  </p>
+     <ul>
+
+        <li>Регистрация пользователей (уровень Юзер и Модератор).</li>
+        <li>Подтверждение регистрации по email. </li>
+        <li>Запрет регистрации на сайте. </li>
+        <li>Деактивация аккаунта (временный бан). </li>
+        <li>Лента новостей с комментариями и RSS</li>
+        <li>WYSIWYG редактор страниц</li>
+        <li>3 шаблона, которые вы можете использовать из коробки или как основу для своего дизайна</li>
+        <li>Форум</li>
+        <li>Фотогалерея с автоматическим слайд-шоу</li>
+        <li>Файловое хранилище с авторубрикатором.</li>
+        <li>Поиск по статьям и форуму с выделением результатов.</li>
+        <li>Публикация видео с популярных хостингов в один клик.</li>
+        <li>Удобный и быстрый инструмент работы с БД - SQL Buddy.</li>
+         <li>Построение sitemap.xml с отправкой на основные поисковые сервисы</li>
+      </ul>
+
+
+ <h2> Dakota CMS использует виджеты</h2>
+    <p> Dakota CMS поставляется  с виджетами  </p>
+ <ul>
+    <li>Список тегов</li>
+    <li>Меню в боковой панели</li>
+    <li>Новые комментарии</li>
+    <li>Фотогалерея с автоматическим слайд-шоу</li>
+    <li>Видео с любого популярного хостинга в один клик</li>
+
+     <p> Вы можете легко расширять поставляемые с CMS виджеты с помощью своих.
+</p>
+  </ul>
+
+<h2> Dakota CMS создает чистые URL</h2>
+<p>URL, которые генерирует  Dakota CMS чистые и родственные для поисковых систем.  Dakota CMS использует схему, при которой
+URL адрес делится на сегменты:</p>
+
+<code>www.your-site.com/<var>article</var>/<dfn>title</dfn>/<samp>about-us</samp></code>
+
+
+
+<h2> Dakota CMS использует M-V-C</h2>
+<p> Dakota CMS использует подход Модель-Отображение-Контроллер, который позволяет отделить логику от отображения.
+Это особенно хорошо в проектах, где дизайнеры работают с файлами отображений.
+Мы опишем работу с шаблонами <a href="templates.html">здесь</a> .
+</p>
+
+
+<h2> Dakota CMS не требует применения шаблонизаторов</h2>
+<p>Система шаблонов не может сравниться по производительности с самим PHP, и ее синтаксис, как правило, лишь несколько проще,
+чем обучение основам PHP. Рассмотрим этот фрагмент PHP кода:</p>
+
+<code>&lt;ul&gt;<br>
+<br>
+&lt;?php foreach ($addressbook as $name):?&gt;<br>
+<br>
+&lt;li&gt;&lt;?=$name?&gt;&lt;/li&gt;<br>
+<br>
+&lt;?php endforeach; ?&gt;<br>
+<br>
+&lt;/ul&gt;</code>
+
+<p>Сравним с кодом, используемым  в шаблонах:</p>
+
+<code>&lt;ul&gt;<br>
+<br>
+{foreach from=$addressbook item="name"}<br>
+<br>
+&lt;li&gt;{$name}&lt;/li&gt;<br>
+<br>
+{/foreach}<br>
+<br>
+&lt;/ul&gt;</code>
+
+<p>Да, возможно и код шаблона выглядит немного чище, но он не идет ни в какое сравнение с родным кодом, т.к. ему,
+все равно, придется быть преобразованным. Т.к. основной из наших целей является <em>максимальная производительность</em>,
+в текущей версии мы отказались от принудительного использования шаблонов.</p>
+
+
+<h2> Dakota CMS подробно документирована</h2>
+<p>Программисты любят код и ненавидят писать документацию. Мы, конечно, не исключение, но решив, что документация
+будет являться <strong>неотъемлемой</strong> частью кода, мы решились и подробно все здесь описываем.
+</p>
+
+
+<h2> Dakota CMS имеет дружное сообщество пользователей.</h2>
+
+<p>Наше растущее сообщество пользователей можно наблюдать в публичных <a href="http://dakota-cms.com/forums/">форумах сообщества</a>.</p></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="footer">
+
+	 <p> <a  href="index.html">На главную</a> |  <a href="#top">Наверх страницы</a></p>
+	<p>&copy; 2010 <a href="http://dakota-cms.com">Dakota CMS</a></p>
+
+
+</div>
+
+
+
+
+</body>
+</html>

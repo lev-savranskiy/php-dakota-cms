@@ -1,0 +1,296 @@
+/* @group main */
+/* @group main */
+
+div {
+    border: red 0px solid;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    position: relative;
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    border: none;
+    font-family: 'Trebuchet MS', Arial, Verdana, sans-serif;
+    font-size: small;
+}
+
+ol {
+	list-style: decimal;
+    margin-left: 30px;
+}
+ol  li{
+    padding: 7px 0;
+}
+
+
+input[type="submit"] , input[type="reset"] {
+/*
+    max-width: 150px !important;
+    border: 1px solid #000;
+    background-color: #ddeef6;
+    border-radius: 4px;
+    box-shadow: inset 0 1px 3px #fff, inset 0 -15px #cbe6f2, 0 0 3px #8ec1da;
+    -o-box-shadow: inset 0 1px 3px #fff, inset 0 -15px #cbe6f2, 0 0 3px #8ec1da;
+    -webkit-box-shadow: inset 0 1px 3px #fff, inset 0 -15px #cbe6f2, 0 0 3px #8ec1da;
+    -moz-box-shadow: inset 0 1px 3px #fff, inset 0 -15px #cbe6f2, 0 0 3px #8ec1da;
+    color: #111;
+
+    font-weight: bold;
+    text-shadow: 0 1px #fff;
+    padding: 1px 10px;
+        */
+    cursor: pointer;
+
+}
+
+select {
+      cursor: pointer;
+}
+
+input, textarea, select {
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    border-radius: 7px;
+    border: 1px black solid;
+    margin: 0 0 10px 5px;
+    padding: 3px ;
+
+}
+
+#header {
+    height: 30px;
+    width: 100%;
+    background: yellow;
+}
+
+#content {
+    padding: 40px 0 50px 0;
+}
+
+#footer {
+    height: 40px;
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    left: 0;
+    bottom: 0;
+}
+
+/* stupid IE */
+
+.table-head  td {
+    font-weight: bold;
+    background-color: #eee;
+}
+
+tr, td {
+    border-bottom: 1px #cccfde solid;
+    padding: 5px;
+    background-color: #fffeee;
+}
+
+.create-button {
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    border-radius: 7px;
+    border: 1px black solid;
+    padding: 5px;
+    width: 100px;
+    text-align: center;
+    display: block;
+    text-decoration: none;
+    background: #eef; /* ??????????? ??? ie */
+}
+
+.create-button:hover{
+    -webkit-box-shadow: 0px 0px 15px #222;
+    -moz-box-shadow: 0px 0px 15px #222;
+     box-shadow: 0px 0px 15px #222;
+}
+
+.help-button{
+margin-right: 5%;
+}
+
+tr:nth-child(even) {
+    background: #eff
+}
+
+tr:nth-child(odd) {
+    background: #eef
+}
+
+#articles-table {
+    margin-top: 30px;
+
+}
+
+#articles-table tr td {
+    text-align: center;
+}
+
+img {
+    border: none;
+}
+
+a {
+    color: #031B27;
+    text-decoration: underline;
+}
+
+.padded {
+    padding: 20px 20px 0 10px;
+    text-align: center;
+}
+
+#gallery div img.del {
+    padding-right: 16px;
+}
+
+.pagination {
+    text-align: center;
+}
+
+.label-left {
+    width: 100px;
+    display: block;
+    float: left;
+
+}
+
+* html #container {
+    height: 100%;
+}
+
+#main {
+    float: left;
+    width: 70%;
+    min-width: 400px;
+    margin: 30px 0; /* border: 1px #ccc solid; */
+    padding: 10px;
+
+}
+
+#sidebar {
+    float: right;
+    width: 22%;
+    min-width: 200px;
+    margin: 30px 0 30px 2%;
+    border: 1px #ccc solid;
+    padding: 10px;
+
+}
+
+#page {
+    position: relative;
+    min-height: 95%;
+
+}
+
+/*#menu {*/
+
+    /*margin-left: 20%;*/
+/*}*/
+
+/*#menu a {*/
+
+    /*margin: 0 10px;*/
+/*}*/
+
+.article {
+    padding: 20px;
+    margin-bottom: 10px;
+    border: 2px solid #CCCCCC;
+}
+
+.text img {
+    float: left;
+    padding: 10px;
+}
+
+.title {
+    font-weight: bold;
+    color: black;
+    font-size: 1.2em;
+}
+
+.comment {
+
+    margin: 10px 0;
+    padding: 10px;
+    border-bottom: 2px solid #CCCCCC;
+}
+
+.prim {
+    font-size: small;
+    color: #555;
+}
+
+.brown {
+    color: #CC6600;
+}
+
+#profile-link {
+
+    right: 10px;
+    top: 10px;
+
+}
+
+.admin-home {
+
+    padding-top: 0;
+
+}
+
+.admin-home img {
+    margin: 32px;
+}
+
+#main {
+    border: none;
+    width: 93%;
+}
+
+#admin-main {
+    margin: 0 0 0 30px;
+}
+#admin_form {
+    margin: 10px 0;
+}
+
+#admin_form form input, #admin_form form textarea {
+    width: 500px;
+}
+
+#admin_form form textarea {
+    height: 100px;
+}
+
+
+
+#admin_form form input[type="submit"] , #admin_form form input[type="reset"] {
+    width: 80px;
+}
+
+.tag{
+    width: 100px;
+    margin-right: 20px;
+}
+
+.menu_hidden {
+
+max-height:0px;
+}
+
+.menu_visible {
+height:300px;    
+}

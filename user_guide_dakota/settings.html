@@ -1,0 +1,149 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+
+    <title>Dakota CMS : руководство пользователя</title>
+
+    <link rel='stylesheet' type='text/css' media='all' href='userguide.css'/>
+
+
+    <link rel="icon" href="/favicon.ico" type="image/x-icon"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv='expires' content='-1'/>
+    <meta http-equiv='pragma' content='no-cache'/>
+    <meta name='robots' content='all'/>
+    <meta name='author' content='Dakota CMS Dev Team'/>
+    <meta name='description' content='Руководство по  Dakota CMS на русском языке'/>
+    <meta name='keywords'
+          content='Dakota CMS, codeigniter, фреймворк, руководство, описание,cms, php, разработка, программирование, модель, отображение, контроллер'/>
+
+</head>
+<body>
+
+<table cellpadding="0" cellspacing="0" border="0" style="width:100%">
+    <tr>
+        <td id="breadcrumb">
+
+            <a href="http://dakota-cms.com" target="_blank">Dakota CMS Home</a> | <a href="/" target="_blank">Project
+            Home</a> | <a  href="index.html"  name="top">Documentation Home</a>
+
+        </td>
+
+    </tr>
+</table>
+
+<div id="masthead">
+    <table cellpadding="0" cellspacing="0" border="0" style="width:100%">
+        <tr>
+            <td><h1> Dakota CMS, руководство пользователя к версии 0.4</h1></td>
+
+        </tr>
+    </table>
+</div>
+
+
+<div id="content">
+
+    <h1> Основные настройки</h1>
+
+
+    <h2>Данные сайта </h2>
+
+    <ul>
+        <li> Здесь Вы можете изменить TITLE, KEYWORDS, META_DESCRIPTION сайта.
+            Писать нужно текст, без тегов.
+
+        </li>
+        <li> META_EXTRA: дополнительные теги , которые вы хотите вывести в HEAD.
+            Писать нужно HTML разметку, например <br/> <br/>
+
+            &lsaquo;meta name="google-site-verification" content="asfdsf3w-XWDNFjTNJnFS6w66CrL1pb5a8_2vbe05w" /&rsaquo;
+            <br/> <br/>
+            Оставьте пустым, если не знаете , что это.
+
+        </li>
+        <li>Статус #profile-link на сайте (Если Вам не нужен раздел авторизации #profile-link или вы хотите
+            кастомизировать его с помощью javascript).
+        </li>
+        <li>Статус регистрации на сайте.</li>
+        <img src="img/icon_important_24.gif"/> Возможность входа по ссылке <a href="/login" target="_blank">login</a>
+        сохраняется всегда.
+
+
+    </ul>
+
+    <h2>Работа с кэшем </h2>
+    <ul>
+        <li>
+           Указав время кеширования, вы можете существенно ускорить загрузку этих страниц сайта.
+            <ul>
+                <li>Публикации с отключенными комментариями</li>
+                <li>Список пользователей</li>
+                <li>Галерея</li>
+            </ul>
+        </li>
+        <img src="img/icon_important_24.gif"/><b>
+        Если кэш включен, то все изменения в указанных разделах не будут видны до его истечения. Для удаления кэша
+        воспользуйтесь одноименной ссылкой.
+
+    </b>
+    </ul>
+
+    <h2>Работа с БД </h2>
+
+    <ul>
+        <li>Кнопка 'Сохранить БД в SQL' экспортирует данные SQL в файл mybackup.sql в корне сайта и на рабочий стол с
+            названием, содержащим текущее время. Это может быть удобно для миграции и архивирования сайта.
+        </li>
+        <li> В текущей версии Дакота сохраняет только последнюю версию БД. Если вам нужно ежедневное копирование,
+            обратитесь к администратору сервера.
+        </li>
+        <li> Кнопка 'Перестроить БД' запросит ссылку /admin/load_fixtures/. Таким образом Все таблицы будут удалены и
+            созданы из моделей Doctrine_Record, папка /application/models. Все данные будут удалены и загружены
+            из папки /application/fixtures
+        </li>
+
+        <b><img src="img/icon_important_24.gif"/> Это действие нельзя отменить из админ-центра. Рекомендуется Сохранить
+            БД в SQL файл и иметь познания в SQL.
+            Удалите файл /admin/load_fixtures.php, если вы не планируете обнулить систему или заниматься собственной
+            разработкой c YAML фикстурами</b>.
+
+        <li>Если при загрузке /admin/load_fixtures/ произошла ошибка, удалите из БД вручную все таблицы, кроме
+            "ci_sessions" и попробуйте еще раз.
+        </li>
+        <li> Все операции с БД не влияют на <a href="widgets.html">виджеты</a>, <a href="templates.html">шаблоны</a>, <a
+                href="gallery.html">галерею</a> и <a href="files.html">файлы в папке uploads</a></li>
+    </ul>
+
+    <h2>Работа с Sitemap </h2>
+
+    <ul>
+        <li> Sitemaps — это XML-файл с информацией для поисковых систем о страницах веб-сайта, которые подлежат
+            индексации.
+        </li>
+        <li> Кнопка 'Перестроить sitemap' создаёт новый sitemap.xml в корне сайта с информацией о текущих публикациях а
+            также отсылает sitemap на Google, Ask, bing, Yahoo
+        </li>
+        <li>В текущей версии Dakota создает sitemap из основных разделов с приоритетом 0,5, обновление daily и всех
+            видимых публикаций с приоритетом 0.4, обновление monthly
+        </li>
+        <li>Для добавления sitemap в Яндекс перейдите по ссылке http://webmaster.yandex.ru/site/add.xml</li>
+        <!-- <li>Для добавления sitemap  в Yahoo заполните  переменную YAHOO_APP_ID в файле /system/application/config/constants.php</li>-->
+    </ul>
+
+</div>
+
+
+<div id="footer">
+
+    <p><a  href="index.html">На главную</a> | <a href="#top">Наверх страницы</a></p>
+
+    <p>&copy; 2010 <a href="http://dakota-cms.com">Dakota CMS</a></p>
+
+
+</div>
+
+
+</body>
+</html>

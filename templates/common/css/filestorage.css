@@ -1,0 +1,77 @@
+
+ul#menu
+{
+	list-style-type: none;
+	margin: 4px;
+	padding: 0px;
+}
+
+ul#menu li
+{
+	float: left;
+	margin: 4px;
+}
+
+ul#menu li.active
+{
+	background-color: #98b9d0;
+	border-left: 1px solid #3564a9;
+	border-top: 1px solid #3564a9;
+	border-bottom: 1px solid #e6eef6;
+	border-right: 1px solid #e6eef6;
+}
+
+ul#menu li a
+{
+	text-decoration: none;
+
+	padding: 2px;
+	color: #3564a9;
+}
+
+ul#files
+{
+	list-style-type: none;
+	margin: 40px 0px 0px 0px;
+	padding: 0px;
+}
+
+ul#files li
+{
+	background-color: #fffeee;
+	border-bottom: 1px solid #222;
+	padding: 2px;
+	margin-bottom: 1px;
+}
+
+ul#files li a
+{
+	text-decoration: none;
+	color: #3564a9;
+	padding: 2px 25px;
+	background-position: left;
+	background-repeat: no-repeat;
+}
+
+ul#files li.Documents a
+{
+	background-image: url('/templates/common/img/icon_doc.jpg');
+}
+
+ul#files li.Images a
+{
+	background-image: url('/templates/common/img/icon_picture.jpg');
+}
+
+ul#files li.Archives a
+{
+	background-image: url('/templates/common/img/icon_zip.jpg');
+
+}ul#files li.Music a
+{
+	background-image: url('/templates/common/img/icon_music.png');
+
+}ul#files li.Video a
+{
+	background-image: url('/templates/common/img/icon_video.png');
+}

@@ -1,0 +1,212 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+
+    <title>Dakota CMS : руководство пользователя</title>
+
+    <link rel='stylesheet' type='text/css' media='all' href='userguide.css'/>
+
+
+    <link rel="icon" href="/favicon.ico" type="image/x-icon"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv='expires' content='-1'/>
+    <meta http-equiv='pragma' content='no-cache'/>
+    <meta name='robots' content='all'/>
+    <meta name='author' content='Dakota CMS Dev Team'/>
+    <meta name='description' content='Руководство по  Dakota CMS на русском языке'/>
+    <meta name='keywords'
+          content='Dakota CMS, codeigniter, фреймворк, руководство, описание,cms, php, разработка, программирование, модель, отображение, контроллер'/>
+
+</head>
+<body>
+
+<table cellpadding="0" cellspacing="0" border="0" style="width:100%">
+    <tr>
+        <td id="breadcrumb">
+
+            <a href="http://dakota-cms.com" target="_blank">Dakota CMS Home</a> | <a href="/" target="_blank">Project
+            Home</a> | <a href="index.html" name="top">Documentation Home</a>
+
+        </td>
+
+    </tr>
+</table>
+
+<div id="masthead">
+    <table cellpadding="0" cellspacing="0" border="0" style="width:100%">
+        <tr>
+            <td><h1> Dakota CMS, руководство пользователя к версии 0.4</h1></td>
+
+        </tr>
+    </table>
+</div>
+
+
+<div id="content">
+
+    <h1> Работа с меню</h1>
+
+
+    <ul>
+        <h2>Информация </h2>
+
+        <li>
+            В этом разделе можно создавать, редактировать и перемещать пункты меню.
+        </li>
+
+        <li>
+            Для использования многоязычных названий пунктов используйте запись title вида %dakota_articles. 
+        </li>
+        <li>
+         Все доступные слова и фразы вы можете найти в файле  dakota_lang.php
+      <a href="i18n.html">Подробнее о кастомизации языков</a>
+        </li>
+
+         <li>
+            Меню не проверяет ссылки. Если вы сделали ссылку на страницу, а позже скрыли ее в админ-центре или удалили ,
+            пользователь
+            увидит страницу 404.
+        </li>
+
+
+        <li>
+            Если пункт меню содержит подпункты, то при его удалении они будут
+            удалены вместе с ним.
+
+        </li>
+
+        <li>
+            Внешние ссылки открываются в новом окне.
+        </li>
+        <li>
+            Изменения вступают в силу назамедлительно.
+
+        </li>
+
+        <h2>Пример меню в админ-центре</h2>
+
+        <p>
+            <img src="img/_prev_menu.jpg" alt=""/>
+        </p>
+
+        <h2>Стили меню</h2>
+        <table style="padding: 10px 0; ">
+            <tr>
+                <td style="padding: 10px 0;">
+                    <b> Расположение наверху страницы</b>
+                </td>
+                <td style="padding: 10px 0;">
+                    <b> Расположение в боковой панели</b>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <img src="img/menu-top.png" alt=""/>
+                </td>
+                <td>
+                    <img src="img/menu-sidebar.png" alt=""/>
+                </td>
+            </tr>
+
+            <tr>
+                <td style="padding-right: 50px;">
+                    <ol>
+                        <li>
+                            Укажите строку &lsaquo;?= MENU; ?&rsaquo в header.tpl.
+                        </li>
+                        <li>
+                            Не рекомендуется использовать подпункты без предварительного создания стилей
+                            или скриптов, раскрывающих их
+                        </li>
+                        <li>
+                            Смотри след. пункт для информации о стилях
+                        </li>
+
+                    </ol>
+
+
+                </td>
+                <td>
+                    <ol>
+                        <li>
+                            Удалите строку &lsaquo;?= MENU; ?&rsaquo из header.tpl
+                        </li>
+                        <li>
+                            В файле
+                            \widgets\00_menu.php
+                            укажите
+
+                            $widget_info['active'] = 1;
+
+                        </li>
+                        <li>
+                            Использовать подпункты можно без создания стилей.
+                        </li>
+                    </ol>
+
+
+                </td>
+            </tr>
+
+        </table>
+        <li> Меню выводится в виде &lsaquo;ul&rsaquo; &lsaquo;li&rsaquo;
+            списка. Можно создать любое количество пунктов в корне меню, в каждом можно создать свой список.
+        </li>
+
+        <li>Корневые элементы имеют id вида 'menu_id' и класс "menu_root", последний пункт имеет класс
+            "menu_root_last"<br/><br/>     </li>
+
+       <h2>
+
+            Пример вывода меню из 3 пунктов, во втором 2 подпункта.</h2>
+
+
+            <ul>
+                <li id="menu_1" class="menu_root">
+                    <a href="/gallery">Gallery</a></li>
+                <li id="menu_2" class="menu_root"><a href="/articles">Links</a>
+                    <ul>
+                        <li><a href="http://dakota-cms.com/" target="_blank">dakota-cms.com</a></li>
+                        <li><a href="http://wap7.ru" target="_blank">wap7.ru</a></li>
+                    </ul>
+                </li>
+                <li id="menu_3" class="menu_root_last"><a href="/forums">Forum</a></li>
+            </ul>
+<pre>
+          &lsaquo;ul&rsaquo;
+    &lsaquo;li id="menu_1" class="menu_root"&rsaquo;
+    &lsaquo;a href="/gallery"&rsaquo;Gallery&lsaquo;/a&rsaquo;&lsaquo;/li&rsaquo;
+    &lsaquo;li id="menu_2" class="menu_root"&rsaquo;&lsaquo;a href="/articles"&rsaquo;Links&lsaquo;/a&rsaquo;
+    &lsaquo;ul&rsaquo;
+    &lsaquo;li&rsaquo;&lsaquo;a href="http://dakota-cms.com/" target="_blank"&rsaquo;dakota-cms.com&lsaquo;/a&rsaquo;&lsaquo;/li&rsaquo;
+    &lsaquo;li&rsaquo;&lsaquo;a href="http://wap7.ru"  target="_blank"&rsaquo;wap7.ru&lsaquo;/a&rsaquo;&lsaquo;/li&rsaquo;
+    &lsaquo;/ul&rsaquo;
+    &lsaquo;/li&rsaquo;
+    &lsaquo;li id="menu_3" class="menu_root_last"&rsaquo;&lsaquo;a href="/forums"&rsaquo;Forum&lsaquo;/a&rsaquo;&lsaquo;/li&rsaquo;
+    &lsaquo;/ul&rsaquo;
+</pre>
+
+
+
+
+    </ul>
+    <!--
+
+
+    -->
+</div>
+
+<div id="footer">
+
+    <p><a href="index.html">На главную</a> | <a href="#top">Наверх страницы</a></p>
+
+    <p>&copy; 2010 <a href="http://dakota-cms.com">Dakota CMS</a></p>
+
+
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+Menu_model:
+  News:
+    order_id: 1
+    title: %dakota_articles
+    url: /articles
+  Main:
+    order_id: 2
+    title:  %dakota_gallery
+    url: /gallery
+  Forum:
+    order_id: 3
+    title: %dakota_forums
+    url: /forums
+  users:
+    order_id: 4
+    title: %dakota_users
+    url: /users
+  Doc:
+    order_id: 5
+    title: %dakota_user_guide
+    url: /user_guide_dakota
+  dakotasrc:
+    order_id: 6
+    title: %dakota_download
+    url: /articles/title/files
+  dakota:
+    order_id: 7
+    title: dakota-cms.com
+    url: http://dakota-cms.com/

@@ -1,0 +1,183 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+
+    <title>Dakota CMS : руководство пользователя</title>
+
+    <link rel='stylesheet' type='text/css' media='all' href='userguide.css'/>
+
+
+    <link rel="icon" href="/favicon.ico" type="image/x-icon"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv='expires' content='-1'/>
+    <meta http-equiv='pragma' content='no-cache'/>
+    <meta name='robots' content='all'/>
+    <meta name='author' content='Dakota CMS Dev Team'/>
+    <meta name='description' content='Руководство по  Dakota CMS на русском языке'/>
+    <meta name='keywords'
+          content='Dakota CMS, codeigniter, фреймворк, руководство, описание,cms, php, разработка, программирование, модель, отображение, контроллер'/>
+
+</head>
+<body>
+
+<table cellpadding="0" cellspacing="0" border="0" style="width:100%">
+    <tr>
+        <td id="breadcrumb">
+
+            <a href="http://dakota-cms.com" target="_blank">Dakota CMS Home</a> | <a href="/" target="_blank">Project
+            Home</a> | <a  href="index.html"  name="top">Documentation Home</a>
+
+        </td>
+
+    </tr>
+</table>
+
+<div id="masthead">
+    <table cellpadding="0" cellspacing="0" border="0" style="width:100%">
+        <tr>
+            <td><h1> Dakota CMS, руководство пользователя к версии 0.4</h1></td>
+
+        </tr>
+    </table>
+</div>
+
+
+<div id="content"><h1>Установка Dakota CMS</h1>
+
+    <ol>
+        <li>Убедитесь , что ваша система отвечает <a href="requirements.html">требованиям</a></li>
+
+         <li>  Загрузите свежую версию   на сайте  <a href="http://dakota-cms.com" target="_blank">http://dakota-cms.com</a></li>
+        <li>Сконфигурируйте ваш сервер, чтобы он отвечал на запрос, например http://dakota.loc/</li>
+        <li>Скачайте файлы Dakota CMS и распакуйте в HOME DIR вашего сервера. Например, для WAMP -
+            D:\www\home\dakota.loc\www
+        </li>
+
+        <li>В файле \system\application\config\config.php укажите
+            <ul>
+
+                <li>
+                    Адрес вашего проекта, если он находится не в корне сайта например
+                    <br/> $config['base_url'] = "http://dakota.loc/test/"
+
+                    <br/>
+                    Для системы в корне сайта,   возможно, в некоторых конфигурациях это также необходимо.
+                </li>
+
+                <li>
+                 Email, с которого будет приходить регистрация пользователям
+                    <br/> По умолчанию - $config['reg_robot_email'] = "registration@dakota.loc";
+                </li>
+                <li>
+                  Email для связи с хозяином сайта
+                    <br/>  По умолчанию - $config['support_email'] = "support@dakota.loc";
+                </li>
+                <li>
+
+                     Секретный набор символов, который будет использован для шифрования данных
+                    <br/> $config['salt'] = "#*seCrEt$%^*!@-*%";
+                    <br/><br/>
+
+
+
+                </li>
+            </ul>
+                     <b>Важно: $config['salt'] нельзя поменять после запуска проекта</b>
+                     <br/> <b>Важно: не забывайте менять соотв. параметры при выгрузке сайта на продакшн.</b>
+        </li>
+
+        <li>Создайте базу данных для Dakota CMS. Кодировка UTF-8</li>
+
+        <li>В файле \system\application\config\database.php укажите переменные: <br/> <br/>
+            <textarea rows="9" cols="50" style="width: 100%;" class="textarea">
+                // Develop DB
+                $db['default']['hostname'] = "Хост БД";
+                $db['default']['username'] = "Логин пользователя БД";
+                $db['default']['password'] = "Пароль пользователя БД";
+                $db['default']['database'] = "Название созданной БД ";
+
+                Если БД не mysql то укажите
+                $db['default']['dbdriver'] = "ваш тип";
+            </textarea>
+
+            <!-- Также укажите данные // Production DB, если они отличаются. -->
+        </li>
+
+        <li>
+            Зайдите по ссылке <a href="/sqlbuddy/ ">[http://dakota.loc/sqlbuddy/]</a>  или в другои инструмент работы
+            с вашей БД и выполните SQL запрос: <a href="sql.html">[помощь]</a><br/><br/>
+
+            <textarea rows="10" cols="50" style="width: 100%;" class="textarea">
+                CREATE TABLE IF NOT EXISTS `ci_sessions` (
+                session_id varchar(40) DEFAULT '0' NOT NULL,
+                ip_address varchar(16) DEFAULT '0' NOT NULL,
+                user_agent varchar(50) NOT NULL,
+                last_activity int(10) unsigned DEFAULT 0 NOT NULL,
+                user_data text NOT NULL,
+                PRIMARY KEY (session_id)
+                )
+                ENGINE='InnoDB' DEFAULT CHARSET='utf8' ;
+            </textarea>
+
+
+        </li>
+
+
+        <li>
+            В файле \system\application\fixtures\user.yml укажите ваши данные <br/>
+            <textarea rows="6" cols="50" style="width: 100%;" class="textarea">
+                Admin:
+                &nbsp;&nbsp;firstname: John
+                &nbsp;&nbsp;lastname: Doe
+                &nbsp;&nbsp;password: superpassword
+                &nbsp;&nbsp;email: example@example.com
+            </textarea>
+            <b><img src="img/icon_important_24.gif"/>Не трогайте сдвиг строк в файле и пользователя Anonymous (он необходим для сообщений от анонимных пользователей)
+                - просто заполните 4 строки данных</b>
+
+
+        </li>
+        <li>
+            Для БД Mysql убедитесь, что тип таблиц InnoDB включен. Откройте файл \путь до
+            сервера\usr\local\mysql5\my.cnf
+            в районе 80 строки находим
+            skip-innodb <br/>
+            Если это так - без решетки в начале, комментируем строку #skip-innodb и перезапускаем сервер.
+        </li>
+        <li>
+            Для не Win систем убедитесь, что папки /uploads/ и /system/cache/ имеют статус 0666 (0777)
+        </li>
+        <li>
+            Перейдите по ссылке http://dakota.loc/admin/load_fixtures/
+        </li>
+
+        <li> Подробнее о возможности использования fixtures сказано <a href="settings.html">здесь</a>
+        </li>
+        <li>
+            Если все было сделано верно, вы попадете на главную страницу проекта. Залогиньтесь с указанными в data.yml
+            данными и приступайте к работе!
+        </li>
+        <li>
+            Если вы испытываете проблемы при инсталляции CMS Dakota, опишите их в <a
+                href="http://dakota-cms.com/forums/"
+                target="_blank">форумах
+            сообщества</a>
+        </li>
+
+    </ol>
+</div>
+
+
+<div id="footer">
+
+    <p><a  href="index.html">На главную</a> | <a href="#top">Наверх страницы</a></p>
+
+    <p>&copy; 2010 <a href="http://dakota-cms.com">Dakota CMS</a></p>
+
+
+</div>
+
+
+</body>
+</html>
